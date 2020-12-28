@@ -11,16 +11,7 @@ exports.handler = async (event, context) => {
     const avatarUrl = "fjart";
     //const repoName = body.repository.name;
     const repoName = "Apis";
-    const res = await axios.post(process.env.DISCORD_WEBHOOK_URL, {
-      content: `:taco: :taco: :taco: ${username} just starred ${repoName}! :rocket: :muscle: :tada: :taco:`,
-      embeds: [
-        {
-          image: {
-            url: avatarUrl,
-          },
-        },
-      ],
-    });
+   
     console.log("Submitted!");
     return {
       statusCode: 204,
