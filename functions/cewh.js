@@ -1,7 +1,7 @@
-const axios = require("axios").default;
+import axios from "axios";
 
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   try {
     console.log("Hello webhook!");
     const body = JSON.parse(event.body);
@@ -29,4 +29,4 @@ exports.handler = async (event, context) => {
       console.log("Shit, something went terrible wrong!");
     return { statusCode: 500, body: err.toString() };
   }
-};
+}
