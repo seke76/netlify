@@ -3,6 +3,7 @@ const axios = require("axios").default;
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   try {
+      console.log("TRY STARTED...");
     const body = JSON.parse(event.body);
     //const username = body.sender.login;
     const username = "Stefan";
@@ -25,6 +26,7 @@ exports.handler = async (event, context) => {
       statusCode: 204,
     };
   } catch (err) {
+      console.log("Shit, something went terrible wrong!");
     return { statusCode: 500, body: err.toString() };
   }
 };
