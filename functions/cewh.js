@@ -3,7 +3,7 @@ const axios = require("axios").default;
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = async (event, context) => {
   try {
-      console.log("TRY STARTED...");
+    console.log("Hello webhook!");
     const body = JSON.parse(event.body);
     //const username = body.sender.login;
     const username = "Stefan";
