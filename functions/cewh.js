@@ -4,9 +4,12 @@ const axios = require("axios").default;
 exports.handler = async (event, context) => {
   try {
     const body = JSON.parse(event.body);
-    const username = body.sender.login;
-    const avatarUrl = body.sender.avatar_url;
-    const repoName = body.repository.name;
+    //const username = body.sender.login;
+    const username = "Stefan";
+    //const avatarUrl = body.sender.avatar_url;
+    const avatarUrl = "fjart";
+    //const repoName = body.repository.name;
+    const repoName = "Apis";
     const res = await axios.post(process.env.DISCORD_WEBHOOK_URL, {
       content: `:taco: :taco: :taco: ${username} just starred ${repoName}! :rocket: :muscle: :tada: :taco:`,
       embeds: [
