@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
     console.log("Hello webhook!");
     const body = JSON.parse(event.body);
     //const username = body.sender.login;
-    const username = "Stefan";
+    const username = "Stefaneklund";
     //const avatarUrl = body.sender.avatar_url;
     const avatarUrl = "fjart";
     //const repoName = body.repository.name;
